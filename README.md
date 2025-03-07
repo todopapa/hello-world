@@ -1,5 +1,6 @@
 # hello-world
 test project
+```
 /*
  * ATTINY202_LED_BLINK_SMPL1.cpp
  *
@@ -17,7 +18,7 @@ int main(void) {
 	_PROTECTED_WRITE(CLKCTRL.MCLKCTRLA, CLKCTRL_CLKSEL_OSC20M_gc); // CLK 20MHz選択
 	_PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, 0x00); // 分周なし
 	// PA2を出力モードに設定
-	PORTA.DIR =LED_PIN;        // IOMAPEDのVPORTAだと、OUTSET,OUTCLRが使えないので…
+	PORTA.DIR =LED_PIN;        // IOMAPEDのVPORTAだと、OUTSET,OUTCLRが使えない
 
 	while (1) {
 		// PA2をHIGHに設定してLED点灯
@@ -29,4 +30,4 @@ int main(void) {
 		_delay_ms(1000);
 	}
 }
-
+```
